@@ -11,3 +11,18 @@ view to component
         1.2.2 event binding using ($event) (event name)="functionname($event)"
         1.2.3 event binding using etemplate rendering variable #variable_name
 2. two way binding
+    2.1 ngModel- FormsModule
+
+Redirection
+--------------
+
+method navigateByUrl---Router class method
+
+dependency injection- data sharing between two depended classes
+
+Angular Services
+---------------------
+to store redundant database
+
+ng g s service_name
+

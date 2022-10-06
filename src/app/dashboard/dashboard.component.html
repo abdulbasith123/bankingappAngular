@@ -1,0 +1,55 @@
+<div class="ps-5 pe-5 ms-3">
+    <h1 class="text-black">Welcome {{user}}</h1>
+</div>
+
+<div class="ps-5 pt-2 pe-5 ms-3 bg-warning text-center" style="height:50px; width:300px; border-radius:10px;">
+    <a routerLink="/transaction" class="text-primary" style="text-decoration:none;">View Transaction History</a>
+
+</div>
+
+<div class="container w-50 bg-light border mt-5 p-3" style="background:rgba(93, 149, 134, 0.5); border-radius: 25px;">
+    <h1 class="text-center">Deposit</h1>
+    <form (ngSubmit)="deposit()">
+        <div>
+            <input type="text" name="acnumber" placeholder="acnumber" [(ngModel)]="acnum" class="form-control"
+                id="acno">
+        </div>
+        <div class="mt-2 p=2">
+            <input type="password" name="password" placeholder="enter password" [(ngModel)]="pswrd" class="form-control"
+                id="psw">
+        </div>
+
+        <div class="mt-2 p=2">
+            <input type="text" name="amount" placeholder="amount to deposit" [(ngModel)]="amnt" class="form-control"
+                id="amnt">
+        </div>
+        <div class="text-center mt-2 p-2">
+            <button type="submit" class="btn btn-success">Deposit</button><br><br>
+
+        </div>
+    </form>
+</div>
+
+
+<div class="container w-50 bg-light border mt-5 p-3" style="background:rgba(93, 149, 134, 0.5); border-radius: 25px;">
+    <h1 class="text-center">Withdraw</h1>
+    <form (ngSubmit)="withdraw()">
+        <div>
+            <input type="text" name="acnumber1" placeholder="acnumber" [(ngModel)]="acnum1" class="form-control"
+                id="acno1">
+        </div>
+        <div class="mt-2 p=2">
+            <input type="password" name="password1" placeholder="enter password" [(ngModel)]="pswrd1"
+                class="form-control" id="psw1">
+        </div>
+
+        <div class="mt-2 p=2">
+            <input type="text" name="amount1" placeholder="amount to withdraw" [(ngModel)]="amnt1" class="form-control"
+                id="amnt1">
+        </div>
+        <div class="text-center mt-2 p-2">
+            <button type="submit" class="btn btn-success">Withdraw</button><br><br>
+
+        </div>
+    </form>
+</div>

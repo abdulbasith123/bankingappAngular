@@ -1,15 +1,19 @@
-<div class="text-info ms-5 p-3"><h3>{{aim}}</h3></div>
+<div class="text-center text-info ms-5 p-3"><h3>{{aim}}</h3></div>
 
 <div class="container w-50 bg-light border mt-5 p-3" style="background:rgba(93, 149, 134, 0.5); border-radius: 25px;">
     <h1 class="text-center">Login Page</h1>
-    <div>
-        <input type="text" [placeholder]="acnt" #acno class="form-control" id="acid">
-    </div>
-    <div class="mt-2 p=2">
-        <input type="password" placeholder="Password" #psw class="form-control" id="pid">
-    </div>
-    <div class="text-center mt-2 p-2">
-        <button type="button" (click)="login(acno,psw)" class="btn btn-success">login</button><br><br>
-        <p>new user? <button type="button" class="btn btn-outline-info" onclick="">register here</button></p>
-    </div>
+    <form (ngSubmit)="login()">
+        <div>
+            <input type="text"  name="acno" [placeholder]="acnt" [(ngModel)]="acno" class="form-control" id="acid">
+        </div>
+        <div class="mt-2 p=2">
+            <input type="password" name="psw" placeholder="Password" [(ngModel)]="psw" class="form-control" id="pid">
+        </div>
+        <div class="text-center mt-2 p-2">
+            <button type="submit"  class="btn btn-success">login</button><br><br>
+            <!-- <p>new user? <button type="button" class="btn btn-outline-info" onclick="">register here</button></p> -->
+            <p>new user? <a href="" class="text-info" routerLink="register" style="text-decoration:none;">Register</a> </p>
+    
+            </div>
+    </form>
 </div>
